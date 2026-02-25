@@ -153,16 +153,52 @@
       margin-top: 40px;
     }
 
+    /* -------- Footer -------- */
+
+    .footer {
+      background: #0c1626;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #cfd6e4;
+    }
+
+    .footer h3 {
+      margin: 0 0 15px 0;
+      font-size: 20px;
+      color: white;
+    }
+
+    .footer .footer-tagline {
+      margin-bottom: 25px;
+      opacity: 0.8;
+    }
+
+    .footer a {
+      color: #fcc049;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .copyright {
+      margin-top: 30px;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
     @media (max-width: 768px) {
       h1 { font-size: 42px; }
       .tagline { font-size: 20px; }
       h2 { font-size: 28px; }
       .feature-box {
       grid-template-columns: 1fr;
-}
+        }
     }
-
-  </style>
+   </style>
 </head>
 
 <body>
@@ -201,7 +237,7 @@
       <div class="list-wide">
         <ul>
           <li>高齢単身者の受け入れに不安がある</li>
-          <li>孤独死リスクを下げたい</li>
+          <li>入居者の孤独死リスクを下げたい</li>
           <li>管理負担を増やさずリスクを可視化したい</li>
           <li>高齢単身入居希望者を断らざるを得ない状況になっていませんか？</li>
         </ul>
@@ -215,15 +251,15 @@
       <h2>StayAliveの仕組み</h2>
 
       <div style="text-align:center; font-size:20px; line-height:2;">
-        入居者アプリ<br>
+        入居者用アプリ<br>
         ↓<br>
-        1日1回 生存確認ボタン押下<br>
+        1日1回 アプリ内生存確認ボタン押下<br>
         ↓<br>
         クラウドに記録<br>
         ↓<br>
         一定時間無反応で状態変化<br>
         ↓<br>
-        オーナーダッシュボードで可視化
+        オーナーダッシュボード（WEB）で可視化
       </div>
 
       <div class="note">
@@ -255,7 +291,7 @@
         <ul>
           <li>受け入れ可能層の拡大</li>
           <li>事故物件化リスクの低減</li>
-          <li>管理会社への説明材料</li>
+          <li>新規設備投資不要</li>
           <li>入居者家族への安心材料</li>
         </ul>
       </div>
@@ -279,6 +315,29 @@
       </div>
     </div>
   </section>
+    
+   <!-- Footer -->
+    <footer class="footer">
+      <h3>StayAlive</h3>
 
+      <div class="footer-tagline">
+        事故物件リスクを下げる不動産向けSaaS
+      </div>
+
+      <div>
+        運営：一級建築士事務所 Kraft Authority<br>
+        お問い合わせ：
+        <a href="mailto:contact@stayalive.jp">kraftauthory.info@gmail.com</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a href="#">プライバシーポリシー</a>｜
+        <a href="#">利用規約</a>
+      </div>
+
+      <div class="copyright">
+        © 2026 StayAlive. All rights reserved.
+      </div>
+    </footer>
 </body>
 </html>
