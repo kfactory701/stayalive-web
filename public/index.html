@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StayAlive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: white;
+      background: #0f1c2e;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    /* 悩み用（広め） */
+    .list-wide {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    /* メリット用（少し狭くして中央寄せ感を出す） */
+    .list-narrow {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    /* ---------------- Hero ---------------- */
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url("LPヘッダー画像.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 1100px;
+      padding: 0 40px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 72px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .stay { color: white; }
+    .alive { color: #fcc049; }
+
+    .tagline {
+      font-size: 26px;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+
+    .release {
+      margin-top: 30px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .cta { margin-top: 40px; }
+
+    .btn {
+      background: #fcc049;
+      color: #1e2a38;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    /* ---------------- Sections ---------------- */
+
+    .section-dark {
+      background: #14243b;
+    }
+
+    .section-light {
+      background: #1b2f4f;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* 注意書き中央 */
+    .note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 特徴ボックス */
+    .feature-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .feature-item {
+      background: #22395e;
+      padding: 30px;
+      border-radius: 12px;
+      font-size: 18px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .price-box {
+      text-align: center;
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 42px; }
+      .tagline { font-size: 20px; }
+      h2 { font-size: 28px; }
+      .feature-box {
+      grid-template-columns: 1fr;
+}
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1>
+        <span class="stay">Stay</span><span class="alive">Alive</span>
+      </h1>
+
+      <div class="tagline">
+        事故物件リスクを下げ、<br>
+        入居受け入れ幅を広げるSaaS
+      </div>
+
+      <div class="release">
+        2026年5月 サービスリリース予定
+      </div>
+
+      <div class="cta">
+        <a href="https://forms.gle/ZNQyVbMV5bxWSqYL8" target="_blank" class="btn">
+          先行導入のご相談・資料請求はこちら
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 悩み -->
+  <section class="section-dark">
+    <div class="container">
+      <h2>こんなお悩みありませんか？</h2>
+
+      <div class="list-wide">
+        <ul>
+          <li>高齢単身者の受け入れに不安がある</li>
+          <li>孤独死リスクを下げたい</li>
+          <li>管理負担を増やさずリスクを可視化したい</li>
+          <li>高齢単身入居希望者を断らざるを得ない状況になっていませんか？</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 仕組み -->
+  <section class="section-light">
+    <div class="container">
+      <h2>StayAliveの仕組み</h2>
+
+      <div style="text-align:center; font-size:20px; line-height:2;">
+        入居者アプリ<br>
+        ↓<br>
+        1日1回 生存確認ボタン押下<br>
+        ↓<br>
+        クラウドに記録<br>
+        ↓<br>
+        一定時間無反応で状態変化<br>
+        ↓<br>
+        オーナーダッシュボードで可視化
+      </div>
+
+      <div class="note">
+        ※本サービスは医療・警備サービスではありません。
+      </div>
+    </div>
+  </section>
+
+  <!-- 特徴 -->
+  <section class="section-dark">
+    <div class="container">
+      <h2>StayAliveの特徴</h2>
+
+      <div class="feature-box">
+        <div class="feature-item"><span style="color:#fcc049;">✔</span> 常時監視ではありません</div>
+        <div class="feature-item"><span style="color:#fcc049;">✔</span> 入居者の自発操作のみ</div>
+        <div class="feature-item"><span style="color:#fcc049;">✔</span> 位置情報取得なし</div>
+        <div class="feature-item"><span style="color:#fcc049;">✔</span> カメラ・マイク不使用</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メリット -->
+  <section class="section-light">
+    <div class="container">
+      <h2>導入メリット</h2>
+
+      <div class="list-narrow">
+        <ul>
+          <li>受け入れ可能層の拡大</li>
+          <li>事故物件化リスクの低減</li>
+          <li>管理会社への説明材料</li>
+          <li>入居者家族への安心材料</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 価格 -->
+  <section class="section-dark">
+    <div class="container">
+      <h2>料金について</h2>
+
+      <div class="price-box">
+        管理規模に応じた柔軟な料金設計<br>
+        詳細はお問い合わせください
+      </div>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://forms.gle/ZNQyVbMV5bxWSqYL8" target="_blank" class="btn">
+          先行導入のご相談はこちら
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
