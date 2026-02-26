@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stayalive-system.jp/sitemap.xml
