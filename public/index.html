@@ -236,12 +236,17 @@
     }
 
     .flow-arrow {
-      font-size: 64px;
+      font-size: 0px;
       color: #2bb6e9;
       line-height: 1;
       text-align: center;
       align-self: center;
       text-shadow: 0 0 10px rgba(43, 182, 233, 0.5);
+    }
+
+    .flow-arrow::before {
+      content: "➜";
+      font-size: 64px;
     }
 
     .mail-circle {
@@ -344,9 +349,14 @@
 
       .flow-arrow {
         transform: none;
-        font-size: 52px;
+        font-size: 0px;
         line-height: 0.8;
         margin: 6px 0;
+      }
+
+      .flow-arrow::before {
+        content: "↓";
+        font-size: 52px;
       }
 
       .mail-circle {
@@ -665,7 +675,7 @@
       <h3>StayAlive System</h3>
 
       <div class="footer-tagline">
-        事故物件リスクを下げる不動産向けSaaS
+        事故物件リスクを下げる不動産経営支援SaaS
       </div>
 
       <div>
