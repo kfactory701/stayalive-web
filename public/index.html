@@ -47,13 +47,44 @@
       line-height: 2;
     }
 
-    /* メリット用（少し狭くして中央寄せ感を出す） */
-    .list-narrow {
-      max-width: 480px;
-      margin: 0 auto;
-      text-align: left;
-      font-size: 20px;
-      line-height: 2;
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .benefit-item {
+      text-align: center;
+    }
+
+    .benefit-icon {
+      width: min(210px, 100%);
+      height: auto;
+      filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.35));
+    }
+
+    .benefit-text {
+      margin-top: 16px;
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 500;
+      color: #f2f5fb;
+      min-height: 2.8em;
+    }
+
+    .benefit-text .accent-red {
+      color: #ff5058;
+      font-weight: 700;
+    }
+
+    .benefit-summary {
+      margin-top: 64px;
+      text-align: center;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 1.35;
+      font-weight: 700;
+      color: #ffffff;
     }
 
     /* ---------------- Hero ---------------- */
@@ -327,6 +358,26 @@
       grid-template-columns: 1fr;
         }
 
+      .benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 16px;
+      }
+
+      .benefit-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+
+      .benefit-text {
+        font-size: 30px;
+      }
+
+      .benefit-summary {
+        margin-top: 50px;
+        font-size: clamp(34px, 8vw, 52px);
+      }
+
       .system-flow {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -429,7 +480,7 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "email": "kraftauthority.info@gmail.com"
+      "email": "contact@stayalive-system.jp"
     }
   }
   </script>
@@ -597,13 +648,36 @@
     <div class="container">
       <h2>導入メリット</h2>
 
-      <div class="list-narrow">
-        <ul>
-          <li>事故物件化リスクの低減</li>
-          <li>入居受け入れ可能層の拡大</li>
-          <li>コミュニケーションコストを抑えて安心を提供</li>
-          <li>万が一のときの早期発見</li>
-        </ul>
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <img src="./images/HP_ic5_install.png" alt="工事不要" class="benefit-icon">
+          <p class="benefit-text">工事・<br>機器購入不要</p>
+        </div>
+
+        <div class="benefit-item">
+          <img src="./images/HP_ic6_accident_property.png" alt="事故物件化リスクの低減" class="benefit-icon">
+          <p class="benefit-text">事故物件化<br>リスクの低減</p>
+        </div>
+
+        <div class="benefit-item">
+          <img src="./images/HP_ic7_residents.png" alt="入居受け入れ可能層の拡大" class="benefit-icon">
+          <p class="benefit-text">入居受け入れ<br>可能層の拡大</p>
+        </div>
+
+        <div class="benefit-item">
+          <img src="./images/HP_ic8_contract.png" alt="安心提供と管理負担増加なし" class="benefit-icon">
+          <p class="benefit-text">安心提供＆<br>管理負担増加なし</p>
+        </div>
+
+        <div class="benefit-item">
+          <img src="./images/HP_ic9_emergency.png" alt="万が一の時の早期発見" class="benefit-icon">
+          <p class="benefit-text">万が一の時の<br><span class="accent-red">早期発見</span></p>
+        </div>
+      </div>
+
+      <div class="benefit-summary">
+        リスクを抑えながら<br>
+        経営の選択肢を広げられます
       </div>
     </div>
   </section>
@@ -680,8 +754,9 @@
 
       <div>
         運営：一級建築士事務所 Kraft Authority<br>
+        （不動産リスクマネジメント事業部）<br>
         お問い合わせ：
-        <a href="mailto:contact@stayalive.jp">kraftauthority.info@gmail.com</a>
+        <a href="mailto:contact@stayalive-system.jp">contact@stayalive-system.jp</a>
       </div>
 
       <div style="margin-top:20px;">
